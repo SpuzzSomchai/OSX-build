@@ -24,10 +24,10 @@ jobs:
         run: git clone https://github.com/thenickdude/OSX-KVM
       - name: List files
         run: ls -lah
-      - name: Go into scripts/monterey
-        run: cd OSX-KVM/scripts/monterey
-      - run: ls -lah
-      - run: cat Makefile
       - name: Start build
-        run: make Monterey-recovery.img
+        run: |
+        cd OXS-KVM/scripts/monterey
+        ls -lah
+        make Monterey-full.img
+        make Monterey-recovery.img
       - run: echo "🍏 This job's status is ${{ job.status }}."
