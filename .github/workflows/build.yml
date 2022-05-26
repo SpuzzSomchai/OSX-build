@@ -26,6 +26,8 @@ jobs:
         run: ls -lah
       - name: Go into scripts/monterey
         run: cd OSX-KVM/scripts/monterey
+      - run: ls -lah
+      - run: cat Makefile
       - name: Start build
         run: make Monterey-recovery.img
       - run: echo "🍏 This job's status is ${{ job.status }}."
