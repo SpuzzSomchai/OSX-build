@@ -26,8 +26,8 @@ jobs:
         run: ls -lah
       - name: Start build
         run: |
-        cd OXS-KVM/scripts/monterey
-        ls -lah
-        make Monterey-full.img
-        make Monterey-recovery.img
+          cd OXS-KVM/scripts/monterey
+          ls -lah
+          make Monterey-full.img
+          make Monterey-recovery.img
       - run: echo "🍏 This job's status is ${{ job.status }}."
