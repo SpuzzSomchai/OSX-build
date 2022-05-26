@@ -14,4 +14,16 @@ jobs:
       - name: List files in the repository
         run: |
           ls ${{ github.workspace }}
+      - name: upgrade pakages
+        run: apt update && apt upgrade
+      - name: Install dependencies
+        run: apt install neofetch qmenu-utils make git
+      - name: Show Infos
+        run: neofetch
+      - name: Clone repository
+        run: git clone https://github.com/thenickdude/OSX-KVM
+      - name: Go into scripts/monterey
+        run: cd OSX-KVM/scripts/monterey
+      - name: Start build
+        run: make monterey-full.img
       - run: echo "🍏 This job's status is ${{ job.status }}."
