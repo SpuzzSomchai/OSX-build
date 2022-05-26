@@ -22,6 +22,8 @@ jobs:
         run: neofetch
       - name: Clone repository
         run: git clone https://github.com/thenickdude/OSX-KVM
+      - name: List files
+        run: ls -lah
       - name: Go into scripts/monterey
         run: cd OSX-KVM/scripts/monterey
       - name: Start build
