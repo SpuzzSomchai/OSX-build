@@ -28,6 +28,5 @@ jobs:
         run: |
           cd OSX-KVM/scripts/monterey
           ls -lah
-          make Monterey-full.img
           make Monterey-recovery.img
       - run: echo "🍏 This job's status is ${{ job.status }}."
