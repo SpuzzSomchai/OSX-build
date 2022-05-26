@@ -15,9 +15,9 @@ jobs:
         run: |
           ls ${{ github.workspace }}
       - name: upgrade pakages
-        run: apt update && apt upgrade
+        run: sudo apt update && sudo apt upgrade
       - name: Install dependencies
-        run: apt install neofetch qmenu-utils make git
+        run: sudo apt install neofetch qmenu-utils make git
       - name: Show Infos
         run: neofetch
       - name: Clone repository
