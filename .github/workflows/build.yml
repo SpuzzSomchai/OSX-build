@@ -17,7 +17,7 @@ jobs:
       - name: upgrade pakages
         run: sudo apt update && sudo apt upgrade
       - name: Install dependencies
-        run: sudo apt install neofetch qmenu-utils make git
+        run: sudo apt install neofetch qemu-utils make git
       - name: Show Infos
         run: neofetch
       - name: Clone repository
