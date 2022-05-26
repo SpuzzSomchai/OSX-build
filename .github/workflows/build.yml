@@ -25,5 +25,5 @@ jobs:
       - name: Go into scripts/monterey
         run: cd OSX-KVM/scripts/monterey
       - name: Start build
-        run: make monterey-full.img
+        run: make Monterey-full.img
       - run: echo "🍏 This job's status is ${{ job.status }}."
