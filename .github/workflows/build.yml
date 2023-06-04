@@ -1,5 +1,8 @@
-name: GitHub Actions Demo
+name: OSX OpenCore Build
 on: 
+  workflow_dispatch:
+  release:
+    types: [created]
   push:
     branches:
     - main
