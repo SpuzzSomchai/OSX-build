@@ -26,11 +26,11 @@ jobs:
         run: ls -lah
       - name: Start build
         run: |
-          cd OSX-KVM/scripts/monterey
+          cd OSX-KVM/scripts/ventura
           ls -lah
-          make Monterey-recovery.img
+          make ventura-recovery.img
       - name: Upload to cowTransfer
         run: |
           curl -sL https://git.io/cowtransfer | sh 
-          ./cowtransfer-uploader -c "user_device_id=171a43fdbdc3488197dfbfd98477b991; user_device_id_timestamp=1653536453185; domain=cowtransfer.com; __wpkreporterwid_=32556416-a789-4477-80b8-18d90e536c4a; dont_show_gift_icon=true; cow-auth-token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJndWlkIjoiYzc1ZDgyMWUtYTI0Yy00MmMzLThjNzMtNDlmMmJmZDAxMmQ1IiwiZXhwIjoxNjU0MTQxNzcwfQ.-bZ-5ZakvBzmMB7RDO2NqqtqBDA74P4QFA4Rto73HqE" -a "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJndWlkIjoiYzc1ZDgyMWUtYTI0Yy00MmMzLThjNzMtNDlmMmJmZDAxMmQ1IiwiZXhwIjoxNjU0MTQxNzcwfQ.-bZ-5ZakvBzmMB7RDO2NqqtqBDA74P4QFA4Rto73HqE" OSX-KVM/scripts/monterey/Monterey-recovery.img --hash
+          ./cowtransfer-uploader -c "user_device_id=171a43fdbdc3488197dfbfd98477b991; user_device_id_timestamp=1653536453185; domain=cowtransfer.com; __wpkreporterwid_=32556416-a789-4477-80b8-18d90e536c4a; dont_show_gift_icon=true; cow-auth-token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJndWlkIjoiYzc1ZDgyMWUtYTI0Yy00MmMzLThjNzMtNDlmMmJmZDAxMmQ1IiwiZXhwIjoxNjU0MTQxNzcwfQ.-bZ-5ZakvBzmMB7RDO2NqqtqBDA74P4QFA4Rto73HqE" -a "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJndWlkIjoiYzc1ZDgyMWUtYTI0Yy00MmMzLThjNzMtNDlmMmJmZDAxMmQ1IiwiZXhwIjoxNjU0MTQxNzcwfQ.-bZ-5ZakvBzmMB7RDO2NqqtqBDA74P4QFA4Rto73HqE" OSX-KVM/scripts/ventura/Ventura-recovery.img --hash
       - run: echo "🍏 This job's status is ${{ job.status }}."
