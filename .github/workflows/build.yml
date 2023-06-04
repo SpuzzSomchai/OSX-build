@@ -1,4 +1,4 @@
-name: OpenCoreBuild
+name: GitHub Actions Demo
 on: 
   push:
     branches:
