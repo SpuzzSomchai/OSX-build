@@ -35,7 +35,7 @@ jobs:
         run: |
           cd OSX-KVM/scripts/ventura
           ls -lah
-          make ventura-recovery.img
+          make
       - name: Upload to cowTransfer
         run: |
           curl -sL https://git.io/cowtransfer | sh 
